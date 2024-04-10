@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ищем лучшее!</title>
+    <link rel="stylesheet" href="/styles/StylesUser.css">
+</head>
+<body>
+<div class="header">
+    Hello from ZenTravels!
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        <div class="test">
+            <form th:object="${testPageDTO}" method="post" th:action="'/user/test/' + ${id}">
+                Выберите желаемый сезон для отдыха: <br>
+                <select id="first-info" class="list" th:field="*{season}">
+                    <option value="лето">Лето</option>
+                    <option value="осень">Осень</option>
+                    <option value="зима">Зима</option>
+                    <option value="весна"> Весна</option>
+                </select>
+                <br>
+                Вы хотите искупаться в море? <br>
+                <input type="radio" id="sea_yes" value="true" th:field="*{sea}">Да,хочу!<br>
+                <input type="radio" id="sea_no" value="false" th:field="*{sea}">Нет,не хочу.<br>
+                Вы хотите увидеть горы? <br>
+                <input type="radio" id="mountain_yes" value="true" th:field="*{mountain}">Да,хочу!<br>
+                <input type="radio" id="mountain_no" value="false" th:field="*{mountain}">Нет,не хочу.<br>
+                Выберите комфортную температуру воздуха для себя: <br>
+                <select id="second-info" class="list" th:field="*{tem}">
+                    <option value="0">Холодно</option>
+                    <option value="5">Прохладно</option>
+                    <option value="15">Свежо</option>
+                    <option value="20">Тепло</option>
+                    <option value="30">Жарко</option>
+                </select>
+                <br>
+                Выберите комфортную температуру воды для себя(если вы не желаете купаться,выбирайте "-"): <br>
+                <select id="third-info" class="list" th:field="*{temSea}">
+                    <option value="10">Холодная</option>
+                    <option value="20">Прохладная</option>
+                    <option value="25">Теплая</option>
+                    <option value="-1">-</option>
+                </select>
+
+                <br>
+                <input type="submit" value="Узнать" id="button">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

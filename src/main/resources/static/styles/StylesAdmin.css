@@ -1,0 +1,150 @@
+.header {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /*place-content: flex-end;*/
+    font-family: "Agency FB", sans-serif;
+    font-size: xxx-large;
+    background-color: #05a8a8;
+    font-style: oblique;
+    letter-spacing: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+.main {
+    height: 600px;
+    align-content: center;
+    /*font-family: "Agency FB", sans-serif;*/
+    font-family: "Gill Sans", serif;
+    text-align: center
+}
+body {
+    align-content: center;
+}
+input {
+    font: 15px/24px 'Muli', sans-serif;
+    color: #333;
+    width: 300px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    margin: 5px;
+    padding: 10px
+}
+.logout {
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+    /*border: #BFC0C0 solid 3px;*/
+    /*border-radius: 5px;*/
+    /*background-color: rgba(135, 143, 143, 0.87);*/
+    /*translate: 90%;*/
+    font-family: "Agency FB", sans-serif;
+    font-size: small;
+    font-style: oblique;
+
+}
+.box {
+    height: auto;
+    width: auto;
+    border: rgba(7, 128, 128, 0.61);
+    background: rgba(7, 128, 128, 0.52);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 50px;
+    display: inline-block;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: rgba(216, 216, 216, 0.75);
+    font-size: 14px;
+    border-left: 1px solid rgba(221, 221, 221, 0.78);
+    border-right: 1px solid rgba(221, 221, 221, 0.76);
+    display: inline-block;
+}
+.table tbody td {
+    text-align: left;
+    border-left: 1px solid rgba(221, 221, 221, 0.77);
+    border-right: 1px solid rgba(221, 221, 221, 0.75);
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+.table thead tr th:first-child, .table tbody tr td:first-child {
+    border-left: none;
+}
+.table thead tr th:last-child, .table tbody tr td:last-child {
+    border-right: none;
+}
+.table tbody tr:nth-child(even){
+    background: rgba(243, 243, 243, 0.75);
+}
+
+button {
+    /*display: inline-flex;*/
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    border: 2px solid #838181;
+    margin: 20px 20px 20px 20px;
+    color: #858484;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    place-content: center;
+}
+
+button a {
+    position: relative;
+    transition: all .45s ease-Out;
+}
+
+.circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+button:hover .circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+}
+
+button:hover a {
+    color: #2D3142;
+}
+body {
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613461893_25-p-fon-dlya-prezentatsii-pro-zapovedniki-25.jpg");
+    background-size: 1800px 900px;
+
+}
+#clock {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}

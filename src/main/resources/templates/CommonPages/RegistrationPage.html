@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/styles/StylesMain.css">
+</head>
+<body>
+<div class="header">
+    Hello from ZenTravels!
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        <form th:object="${user}" method="post" action="/registration">
+            <input type="text" th:field="*{username}" placeholder="LOGIN"><br>
+            <input type="password" th:field="*{password}" placeholder="PASSWORD"><br>
+            <input type="text" name="name" placeholder="NAME"><br>
+            <input type="text" name="surname" placeholder="SURNAME"><br>
+            <input type="email" name="email" placeholder="EMAIL"><br>
+            <input type="submit" value="Отправить"/>
+        </form>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO profiles(name,surname,email,user_id) VALUES ('user','user','user@gmail.ru',2);

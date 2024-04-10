@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратный звонок</title>
+    <link rel="stylesheet" href="/styles/StylesUser.css">
+</head>
+<body>
+<div class="header">
+    Hello from ZenTravels!
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        <form method="post" th:action="'/user/callback/' + ${id}" id="telForm">
+            <h3>Введите ваш номер телефона:</h3> <br>
+            <input type="tel" name="number" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18">
+            <input type="submit" value="Заказать"/><br>
+            <span class="form__error">Формат: +7 (123) 456-78-90</span>
+        </form>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

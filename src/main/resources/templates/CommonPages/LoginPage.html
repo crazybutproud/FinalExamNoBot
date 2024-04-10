@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в аккаунт</title>
+    <link rel="stylesheet" href="/styles/StylesMain.css">
+</head>
+<body>
+<div class="header">
+    Hello from ZenTravels!
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        <form th:object="${user}" method="post" action="/login">
+            <input type="text" th:field="*{username}" placeholder="LOGIN"><br>
+            <input type="text" th:field="*{password}" placeholder="PASSWORD"><br>
+            <input type="submit" value="Войти"/>
+        </form>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

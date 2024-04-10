@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/styles/StylesAdmin.css">
+</head>
+<body>
+<div class="header">
+    ZenTravels admin
+    <a href="/logout" class="logout">Выход</a>
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        Все результаты:
+        <table class="table">
+            <tr>
+                <th>Код</th>
+                <th>ID профиля</th>
+                <th>ID страны</th>
+            </tr>
+            <tr th:each="result:${results}">
+                <td>[[${result.code}]]</td>
+                <td>[[${result.profileId}]]</td>
+                <td>[[${result.countryId}]]</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

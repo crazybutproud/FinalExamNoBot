@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Аккаунт</title>
+    <link rel="stylesheet" href="/styles/StylesUser.css">
+</head>
+<body>
+<div class="header">
+    ZenTravel account
+    <a href="/logout" class="logout">Выход</a>
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box" >
+        <div class="info">
+            <h2><img src="/images/пользователь-проверен-50.png">Ваш аккаунт:</h2><br>
+            <img src="/images/проверка-удостоверения-личности-50.png">ID: <a th:text="${id}">value</a><br>
+            <img src="/images/пользователь-в-кружке-50.png">ИМЯ: <a th:text="${name}">value</a><br>
+            <img src="/images/пользователь-в-кружке-50.png">ФАМИЛИЯ: <a th:text="${surname}">value</a><br>
+            <img src="/images/почта-50.png">EMAIL: <a th:text="${email}">value</a><br>
+        </div>
+        <br>
+        <button><a th:href="@{'/user/test/' + ${id}}">Пройти тест</a></button>
+        <br>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO results (code,country_id,profile_id) VALUES (1,2,1);

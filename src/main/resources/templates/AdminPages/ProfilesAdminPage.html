@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/styles/StylesAdmin.css">
+</head>
+<body>
+<div class="header">
+    ZenTravels admin
+    <a href="/logout" class="logout">Выход</a>
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box">
+        Все профили:
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Почта</th>
+            </tr>
+            <tr th:each="profile:${profiles}">
+                <td>[[${profile.id}]]</td>
+                <td>[[${profile.name}]]</td>
+                <td>[[${profile.surname}]]</td>
+                <td>[[${profile.email}]]</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>

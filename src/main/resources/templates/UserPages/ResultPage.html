@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор сделан!</title>
+    <link rel="stylesheet" href="/styles/StylesUser.css">
+</head>
+<body>
+<div class="header">
+    Hello from ZenTravels!
+    <a href="/logout" class="logout">Выход</a>
+    <a id="clock"></a>
+</div>
+<div class="main">
+    <div class="box" id="result">
+        Вот это да!
+        <h2>Вам подходит - <a th:text="${country}">value</a>!<br></h2>
+        Немного об этом удивительном месте: <br>
+        Столица -  <a th:text="${capital}">value</a> ,
+        а лучшее время для отдыха как раз <a th:text="${bestTime}">value</a>.
+        Средние показатели температуры воздуха в это время около <a th:text="${tem}">value</a> градусов Цельсия.
+        Страна славится своей интересной историей и яркой природой.
+    </div>
+    <br>
+    <button><a th:href="@{'/user/callback/' + ${id}}">Заказать обратный звонок</a></button>
+</div>
+</body>
+<script src="/scripts/Clock.js"></script>
+</html>
